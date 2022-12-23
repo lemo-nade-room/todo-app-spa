@@ -5,7 +5,6 @@
   height: 24px;
   position: relative;
   background-color: transparent;
-  border: 1px solid $accessoryColor;
   border-radius: 4px;
 
   $radius: 12px;
@@ -29,7 +28,6 @@
 
       width: $radius;
       height: $radius;
-      background-color: $accessoryColor;
 
       border-radius: 50%;
       overflow: hidden;

@@ -1,19 +1,13 @@
 <div class="home">
+  <app-category
+    [categories]="categories"
+    titleColor="black"
+    buttonsColor="#BFA445"
+    backgroundColor="#F9F9F9"
+    [(isEdit)]="isEdit"
+    (create)="log('create')"
+  ></app-category>
+
+
   <p>{{ isEdit }}</p>
-  <app-edit-button
-    [(value)]="isEdit"
-    (click)="log()"
-    color="#BFA445"
-  ></app-edit-button>
-
-  <app-create-category-button [backgroundColor]="backgroundColor"></app-create-category-button>
-
-  <app-category-color-icon
-    [color]="'#FFE664'"
-    [length]="24"
-  ></app-category-color-icon>
-
-  <app-categories-list-title color="black"></app-categories-list-title>
-
-  <app-categories-list [categories]="categories"></app-categories-list>
 </div>

@@ -14,7 +14,7 @@ export class EditButtonComponent implements OnInit {
   public ngOnInit(): void {}
 
   @Input() public color!: string;
-  @Input() public value!: boolean;
+  @Input() public value: boolean = false;
   @Output() public valueChange = new EventEmitter<boolean>();
 
   public get display(): string {

@@ -18,8 +18,8 @@ export class HomeComponent implements OnInit {
     return style.backgroundColor;
   }
 
-  public log() {
-    console.log('Hello, World!');
+  public log(message = 'Hello, World!') {
+    console.log(message);
   }
 
   public categories = [
