@@ -13,11 +13,18 @@ export class EditButtonComponent implements OnInit {
 
   public ngOnInit(): void {}
 
+  @Input() public color!: string;
   @Input() public value!: boolean;
   @Output() public valueChange = new EventEmitter<boolean>();
 
   public get display(): string {
     return this.value ? END : EDIT;
+  }
+
+  public get style(): Record<string, string> {
+    return {
+      color: this.color,
+    };
   }
 
   public onClick() {
