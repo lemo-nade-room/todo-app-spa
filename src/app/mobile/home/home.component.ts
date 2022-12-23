@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as style from '@/assets/style/variables';
+import Category from '@/models/Category';
 
 @Component({
   selector: 'app-home',
@@ -20,4 +21,10 @@ export class HomeComponent implements OnInit {
   public log() {
     console.log('Hello, World!');
   }
+
+  public categories = [
+    new Category('フロントエンド', 'front', '#FFE664'),
+    new Category('バックエンド', 'front', '#C0EEEE'),
+    new Category('インフラ', 'front', '#9DE8C4'),
+  ];
 }

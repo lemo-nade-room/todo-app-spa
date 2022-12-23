@@ -9,6 +9,7 @@ import { EditButtonComponent } from './common/edit-button/edit-button.component'
 import { CreateCategoryButtonComponent } from './common/create-category-button/create-category-button.component';
 import { CategoryColorIconComponent } from './common/category-color-icon/category-color-icon.component';
 import { CategoriesListTitleComponent } from './common/categories-list-title/categories-list-title.component';
+import { CategoriesListComponent } from './categories-list/categories-list.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { CategoriesListTitleComponent } from './common/categories-list-title/cat
     CreateCategoryButtonComponent,
     CategoryColorIconComponent,
     CategoriesListTitleComponent,
+    CategoriesListComponent,
   ],
   imports: [
     BrowserModule,
