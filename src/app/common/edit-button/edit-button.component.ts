@@ -15,7 +15,6 @@ export class EditButtonComponent implements OnInit {
 
   @Input() public value!: boolean;
   @Output() public valueChange = new EventEmitter<boolean>();
-  @Output() public click = new EventEmitter<undefined>();
 
   public get display(): string {
     return this.value ? END : EDIT;
@@ -24,6 +23,5 @@ export class EditButtonComponent implements OnInit {
   public onClick() {
     this.value = !this.value;
     this.valueChange.emit(this.value);
-    this.click.emit();
   }
 }

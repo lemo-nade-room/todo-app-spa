@@ -1,0 +1,57 @@
+@import "src/assets/style/variables";
+
+.create-category-button {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  background-color: transparent;
+  border: 1px solid $accessoryColor;
+  border-radius: 4px;
+
+  $radius: 12px;
+
+  & > .plus-mark {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    transform: translate(30%, -30%);
+
+    display: block;
+    width: $radius;
+    height: $radius;
+    background-color: transparent;
+
+    & > .circle {
+      position: absolute;
+      right: 0;
+      top: 0;
+
+      width: $radius;
+      height: $radius;
+      background-color: $accessoryColor;
+
+      border-radius: 50%;
+      overflow: hidden;
+
+      & > .line {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      & > .vertical {
+        width: 1px;
+        height: $radius - 2;
+        border-radius: 1px;
+      }
+
+      & > .horizontal {
+        width: $radius - 2;
+        height: 1px;
+        border-radius: 1px;
+      }
+    }
+  }
+}

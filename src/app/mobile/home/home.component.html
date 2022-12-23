@@ -2,4 +2,7 @@
 <p>{{ isEdit }}</p>
 <app-edit-button
   [(value)]="isEdit"
+  (click)="log()"
 ></app-edit-button>
+
+<app-create-category-button [backgroundColor]="backgroundColor"></app-create-category-button>

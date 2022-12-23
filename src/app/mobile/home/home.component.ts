@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as style from '@/assets/style/variables';
 
 @Component({
   selector: 'app-home',
@@ -11,4 +12,12 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {}
 
   public isEdit = false;
+
+  public get backgroundColor(): string {
+    return style.backgroundColor;
+  }
+
+  public log() {
+    console.log('Hello, World!');
+  }
 }
