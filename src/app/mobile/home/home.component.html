@@ -1,18 +1,19 @@
+<div class="home">
+  <p>{{ isEdit }}</p>
+  <app-edit-button
+    [(value)]="isEdit"
+    (click)="log()"
+    color="#BFA445"
+  ></app-edit-button>
 
-<p>{{ isEdit }}</p>
-<app-edit-button
-  [(value)]="isEdit"
-  (click)="log()"
-  color="#BFA445"
-></app-edit-button>
+  <app-create-category-button [backgroundColor]="backgroundColor"></app-create-category-button>
 
-<app-create-category-button [backgroundColor]="backgroundColor"></app-create-category-button>
+  <app-category-color-icon
+    [color]="'#FFE664'"
+    [length]="24"
+  ></app-category-color-icon>
 
-<app-category-color-icon
-  [color]="'#FFE664'"
-  [length]="24"
-></app-category-color-icon>
+  <app-categories-list-title color="black"></app-categories-list-title>
 
-<app-categories-list-title color="black"></app-categories-list-title>
-
-<app-categories-list [categories]="categories"></app-categories-list>
+  <app-categories-list [categories]="categories"></app-categories-list>
+</div>
