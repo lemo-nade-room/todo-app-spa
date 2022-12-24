@@ -1,0 +1,9 @@
+<ul class="todo-list">
+  <li class="item" *ngFor="let todo of todos">
+    <span class="title">{{ todo.title }}</span>
+    <span class="h-stack">
+      <span class="date">{{ todo.dateString }}</span>
+      <span class="prefix">{{ todo.prefixText }}</span>
+    </span>
+  </li>
+</ul>

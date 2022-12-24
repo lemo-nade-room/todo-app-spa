@@ -11,6 +11,7 @@ import { CategoryColorIconComponent } from './common/category-color-icon/categor
 import { CategoriesListTitleComponent } from './common/category/categories-list-title/categories-list-title.component';
 import { CategoriesListComponent } from './common/category/categories-list/categories-list.component';
 import { CategoryComponent } from './common/category/category.component';
+import { TodoListComponent } from './todo-list/todo-list.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { CategoryComponent } from './common/category/category.component';
     CategoriesListTitleComponent,
     CategoriesListComponent,
     CategoryComponent,
+    TodoListComponent,
   ],
   imports: [
     BrowserModule,
