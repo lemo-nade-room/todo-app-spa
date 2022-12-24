@@ -16,6 +16,7 @@ import { StateTitleComponent } from './state-title/state-title.component';
 import { CreateTodoButtonComponent } from './create-todo-button/create-todo-button.component';
 import { TodoHeaderComponent } from './todo-header/todo-header.component';
 import { TodoTitleComponent } from './todo-title/todo-title.component';
+import { TodoViewComponent } from './mobile/todo-view/todo-view.component';
 
 @NgModule({
   declarations: [
@@ -32,11 +33,15 @@ import { TodoTitleComponent } from './todo-title/todo-title.component';
     CreateTodoButtonComponent,
     TodoHeaderComponent,
     TodoTitleComponent,
+    TodoViewComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot([{ path: '', component: HomeComponent }]),
+    RouterModule.forRoot([
+      { path: '', component: HomeComponent },
+      { path: 'todo', component: TodoViewComponent },
+    ]),
   ],
   providers: [],
   bootstrap: [AppComponent],

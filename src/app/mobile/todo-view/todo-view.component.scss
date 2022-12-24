@@ -1,0 +1,27 @@
+.todo-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  position: relative;
+
+  padding-top: 44px;
+
+  & > .edit {
+    position: absolute;
+    left: 330px;
+    top: 45px;
+  }
+
+  & > .create {
+    position: absolute;
+    left: 315px;
+    top: 95px;
+  }
+
+  & > .state {
+    margin-top: 17px;
+  }
+
+}
