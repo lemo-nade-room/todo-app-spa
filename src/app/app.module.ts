@@ -13,6 +13,7 @@ import { CategoriesListComponent } from './common/category/categories-list/categ
 import { CategoryComponent } from './common/category/category.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { StateTitleComponent } from './state-title/state-title.component';
+import { CreateTodoButtonComponent } from './create-todo-button/create-todo-button.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { StateTitleComponent } from './state-title/state-title.component';
     CategoryComponent,
     TodoListComponent,
     StateTitleComponent,
+    CreateTodoButtonComponent,
   ],
   imports: [
     BrowserModule,
