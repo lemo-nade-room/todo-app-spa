@@ -11,13 +11,13 @@ import { CategoryColorIconComponent } from './common/category-color-icon/categor
 import { CategoriesListTitleComponent } from './common/category/categories-list-title/categories-list-title.component';
 import { CategoriesListComponent } from './common/category/categories-list/categories-list.component';
 import { CategoryComponent } from './common/category/category.component';
-import { TodoListComponent } from './todo-list/todo-list.component';
-import { StateTitleComponent } from './state-title/state-title.component';
-import { CreateTodoButtonComponent } from './create-todo-button/create-todo-button.component';
-import { TodoHeaderComponent } from './todo-header/todo-header.component';
-import { TodoTitleComponent } from './todo-title/todo-title.component';
+import { TodoListComponent } from './common/todo/todo-list/todo-list.component';
+import { StateTitleComponent } from './common/todo/state-title/state-title.component';
+import { CreateTodoButtonComponent } from './common/todo/create-todo-button/create-todo-button.component';
+import { TodoHeaderComponent } from './common/todo/todo-header/todo-header.component';
+import { TodoTitleComponent } from './common/todo/todo-title/todo-title.component';
 import { TodoViewComponent } from './mobile/todo-view/todo-view.component';
-import { TodoStateHeaderComponent } from './todo-state-header/todo-state-header.component';
+import { TodoStateHeaderComponent } from './common/todo/todo-state-header/todo-state-header.component';
 
 @NgModule({
   declarations: [
