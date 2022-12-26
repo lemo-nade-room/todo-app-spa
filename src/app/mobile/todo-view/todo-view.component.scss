@@ -20,8 +20,11 @@
     top: 95px;
   }
 
-  & > .state {
-    margin-top: 17px;
+  & > .header {
+    margin: {
+      top: 17px;
+      bottom: 10px;
+    }
   }
 
 }

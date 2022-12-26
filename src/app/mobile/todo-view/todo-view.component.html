@@ -1,9 +1,7 @@
 <div class="todo-view">
   <app-todo-header class="header" title="フロントエンド" color="#FFE664"></app-todo-header>
-  <app-edit-button color="#BFA445" class="edit"></app-edit-button>
-  <app-create-todo-button class="create"></app-create-todo-button>
   <div *ngFor="let state of todoStates" class="state">
-    <app-state-title [title]="state.title" class="title"></app-state-title>
+    <app-todo-state-header [title]="state.title" [isShowCreateButton]="state.state === 0" class="header"></app-todo-state-header>
     <app-todo-list [todos]="state.todos" class="todo"></app-todo-list>
   </div>
 </div>

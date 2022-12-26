@@ -17,6 +17,7 @@ import { CreateTodoButtonComponent } from './create-todo-button/create-todo-butt
 import { TodoHeaderComponent } from './todo-header/todo-header.component';
 import { TodoTitleComponent } from './todo-title/todo-title.component';
 import { TodoViewComponent } from './mobile/todo-view/todo-view.component';
+import { TodoStateHeaderComponent } from './todo-state-header/todo-state-header.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { TodoViewComponent } from './mobile/todo-view/todo-view.component';
     TodoHeaderComponent,
     TodoTitleComponent,
     TodoViewComponent,
+    TodoStateHeaderComponent,
   ],
   imports: [
     BrowserModule,

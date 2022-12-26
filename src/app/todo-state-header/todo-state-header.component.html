@@ -1,0 +1,5 @@
+<div class="todo-state-header">
+  <app-state-title [title]="title" class="title"></app-state-title>
+  <app-create-todo-button class="create" *ngIf="isShowCreateButton"></app-create-todo-button>
+  <span *ngIf="!isShowCreateButton"></span>
+</div>
