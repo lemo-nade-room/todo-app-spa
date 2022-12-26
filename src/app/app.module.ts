@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from '@/app/mobile/home/home.component';
+import { HomeComponent as MobileHomeComponent } from '@/app/mobile/home/home.component';
 import { RouterModule } from '@angular/router';
 import { EditButtonComponent } from './common/edit-button/edit-button.component';
 import { CreateCategoryButtonComponent } from './common/category/create-category-button/create-category-button.component';
@@ -18,11 +18,14 @@ import { TodoHeaderComponent } from './common/todo/todo-header/todo-header.compo
 import { TodoTitleComponent } from './common/todo/todo-title/todo-title.component';
 import { TodoViewComponent } from './mobile/todo-view/todo-view.component';
 import { TodoStateHeaderComponent } from './common/todo/todo-state-header/todo-state-header.component';
+import { SidebarComponent } from './desktop/sidebar/sidebar.component';
+import { HomeComponent as DesktopHomeComponent } from '@/app/desktop/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
+    MobileHomeComponent,
+    DesktopHomeComponent,
     EditButtonComponent,
     CreateCategoryButtonComponent,
     CategoryColorIconComponent,
@@ -36,12 +39,13 @@ import { TodoStateHeaderComponent } from './common/todo/todo-state-header/todo-s
     TodoTitleComponent,
     TodoViewComponent,
     TodoStateHeaderComponent,
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot([
-      { path: '', component: HomeComponent },
+      { path: '', component: DesktopHomeComponent },
       { path: 'todo', component: TodoViewComponent },
     ]),
   ],
