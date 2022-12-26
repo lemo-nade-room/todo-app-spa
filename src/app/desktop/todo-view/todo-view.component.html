@@ -1,0 +1,17 @@
+<div class="todo-view">
+  <app-sidebar class="sidebar"></app-sidebar>
+
+  <div class="todos">
+
+    <app-todo-header class="header" title="フロントエンド" color="#FFE664"></app-todo-header>
+
+    <div class="lists">
+      <div *ngFor="let state of todoStates" class="state">
+        <app-todo-state-header [title]="state.title" [isShowCreateButton]="state.state === 0" class="header"></app-todo-state-header>
+        <app-todo-list [todos]="state.todos" class="todo"></app-todo-list>
+      </div>
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,36 @@
+.todo-view {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+
+  overflow-x: scroll;
+
+  & > .sidebar {
+    z-index: 2;
+    position: fixed;
+    height: 100vh;
+    left: 0;
+    top: 0;
+  }
+
+  & > .todos {
+    z-index: 1;
+    margin-top: 65px;
+    padding-left: 425px;
+
+    & > .header {
+      position: fixed;
+    }
+
+    & > .lists {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 50px;
+
+      & > .state {
+        margin-right: 40px;
+      }
+    }
+  }
+}

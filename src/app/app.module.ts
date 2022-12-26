@@ -16,10 +16,11 @@ import { StateTitleComponent } from './common/todo/state-title/state-title.compo
 import { CreateTodoButtonComponent } from './common/todo/create-todo-button/create-todo-button.component';
 import { TodoHeaderComponent } from './common/todo/todo-header/todo-header.component';
 import { TodoTitleComponent } from './common/todo/todo-title/todo-title.component';
-import { TodoViewComponent } from './mobile/todo-view/todo-view.component';
+import { TodoViewComponent as MobileTodoViewComponent } from './mobile/todo-view/todo-view.component';
 import { TodoStateHeaderComponent } from './common/todo/todo-state-header/todo-state-header.component';
 import { SidebarComponent } from './desktop/sidebar/sidebar.component';
 import { HomeComponent as DesktopHomeComponent } from '@/app/desktop/home/home.component';
+import { TodoViewComponent as DesktopTodoViewComponent } from './desktop/todo-view/todo-view.component';
 
 @NgModule({
   declarations: [
@@ -37,16 +38,17 @@ import { HomeComponent as DesktopHomeComponent } from '@/app/desktop/home/home.c
     CreateTodoButtonComponent,
     TodoHeaderComponent,
     TodoTitleComponent,
-    TodoViewComponent,
+    MobileTodoViewComponent,
     TodoStateHeaderComponent,
     SidebarComponent,
+    DesktopTodoViewComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot([
       { path: '', component: DesktopHomeComponent },
-      { path: 'todo', component: TodoViewComponent },
+      { path: 'todo', component: DesktopTodoViewComponent },
     ]),
   ],
   providers: [],
