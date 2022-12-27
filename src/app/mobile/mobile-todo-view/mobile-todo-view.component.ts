@@ -3,11 +3,11 @@ import TodoState from '@/models/TodoState';
 import Todo from '@/models/Todo';
 
 @Component({
-  selector: 'app-todo-view',
-  templateUrl: './todo-view.component.html',
-  styleUrls: ['./todo-view.component.scss'],
+  selector: 'app-mobile-todo-view',
+  templateUrl: './mobile-todo-view.component.html',
+  styleUrls: ['./mobile-todo-view.component.scss'],
 })
-export class TodoViewComponent implements OnInit {
+export class MobileTodoViewComponent implements OnInit {
   public todoStates: TodoState[] = [
     new TodoState(0, [
       new Todo(

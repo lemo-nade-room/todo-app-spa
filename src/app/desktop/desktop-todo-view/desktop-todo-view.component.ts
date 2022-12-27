@@ -1,34 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import * as style from '@/assets/style/variables';
-import Category from '@/models/Category';
 import TodoState from '@/models/TodoState';
 import Todo from '@/models/Todo';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
+  selector: 'app-desktop-todo-view',
+  templateUrl: './desktop-todo-view.component.html',
+  styleUrls: ['./desktop-todo-view.component.scss'],
 })
-export class HomeComponent implements OnInit {
+export class DesktopTodoViewComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
-
-  public isEdit = false;
-
-  public get backgroundColor(): string {
-    return style.backgroundColor;
-  }
-
-  public log(message = 'Hello, World!') {
-    console.log(message);
-  }
-
-  public categories = [
-    new Category('フロントエンド', 'front', '#FFE664'),
-    new Category('バックエンド', 'front', '#C0EEEE'),
-    new Category('インフラ', 'front', '#9DE8C4'),
-  ];
 
   public todoStates: TodoState[] = [
     new TodoState(0, [

@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent as MobileHomeComponent } from '@/app/mobile/home/home.component';
+import { MobileHomeComponent as MobileHomeComponent } from '@/app/mobile/mobile-home/mobile-home.component';
 import { RouterModule } from '@angular/router';
 import { EditButtonComponent } from './common/edit-button/edit-button.component';
 import { CreateCategoryButtonComponent } from './common/category/create-category-button/create-category-button.component';
@@ -16,11 +16,13 @@ import { StateTitleComponent } from './common/todo/state-title/state-title.compo
 import { CreateTodoButtonComponent } from './common/todo/create-todo-button/create-todo-button.component';
 import { TodoHeaderComponent } from './common/todo/todo-header/todo-header.component';
 import { TodoTitleComponent } from './common/todo/todo-title/todo-title.component';
-import { TodoViewComponent as MobileTodoViewComponent } from './mobile/todo-view/todo-view.component';
+import { MobileTodoViewComponent as MobileTodoViewComponent } from './mobile/mobile-todo-view/mobile-todo-view.component';
 import { TodoStateHeaderComponent } from './common/todo/todo-state-header/todo-state-header.component';
 import { SidebarComponent } from './desktop/sidebar/sidebar.component';
-import { HomeComponent as DesktopHomeComponent } from '@/app/desktop/home/home.component';
-import { TodoViewComponent as DesktopTodoViewComponent } from './desktop/todo-view/todo-view.component';
+import { DesktopHomeComponent as DesktopHomeComponent } from '@/app/desktop/home/desktop-home.component';
+import { DesktopTodoViewComponent as DesktopTodoViewComponent } from './desktop/desktop-todo-view/desktop-todo-view.component';
+import { ViewHomeComponent } from './view/view-home/view-home.component';
+import { ViewTodoViewComponent } from './view/view-todo-view/view-todo-view.component';
 
 @NgModule({
   declarations: [
@@ -42,13 +44,15 @@ import { TodoViewComponent as DesktopTodoViewComponent } from './desktop/todo-vi
     TodoStateHeaderComponent,
     SidebarComponent,
     DesktopTodoViewComponent,
+    ViewHomeComponent,
+    ViewTodoViewComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot([
-      { path: '', component: DesktopHomeComponent },
-      { path: 'todo', component: DesktopTodoViewComponent },
+      { path: '', component: ViewHomeComponent },
+      { path: 'todo', component: ViewTodoViewComponent },
     ]),
   ],
   providers: [],

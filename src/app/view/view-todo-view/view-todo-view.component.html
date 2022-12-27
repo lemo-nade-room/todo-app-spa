@@ -1,0 +1,8 @@
+<div class="todo-view">
+  <div *ngIf="isMobile; else elseContent">
+    <app-mobile-todo-view></app-mobile-todo-view>
+  </div>
+  <ng-template #elseContent>
+    <app-desktop-todo-view></app-desktop-todo-view>
+  </ng-template>
+</div>
