@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CategoryService } from '@/app/category.service';
+import Category from '@/models/Category';
 
 @Component({
   selector: 'app-view-home',
@@ -6,11 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./view-home.component.scss'],
 })
 export class ViewHomeComponent implements OnInit {
-  constructor() {}
+  constructor(private readonly categoryService: CategoryService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.categoryService
+      .categories()
+      .subscribe((categories) => (this.categories = categories));
+  }
 
   public get isMobile(): boolean {
     return matchMedia('only screen and (max-width: 768px)').matches;
   }
+
+  public categories: readonly Category[] = [];
 }

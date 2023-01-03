@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { TodoService } from '@/app/todo.service';
+import TodoState from '@/models/TodoState';
+import Category from '@/models/Category';
+import { CategoryService } from '@/app/category.service';
 
 @Component({
   selector: 'app-view-todo-view',
@@ -6,9 +10,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./view-todo-view.component.scss'],
 })
 export class ViewTodoViewComponent implements OnInit {
-  constructor() {}
+  constructor(
+    private readonly todoService: TodoService,
+    private readonly categoryService: CategoryService
+  ) {}
 
-  ngOnInit(): void {}
+  public states: readonly TodoState[] = [];
+  public category: Category = new Category(1, '', '', 'white');
+
+  public categories: readonly Category[] = [];
+
+  ngOnInit(): void {
+    this.todoService.fetch('hello').subscribe((data) => {
+      [this.category, this.states] = data;
+    });
+    this.categoryService
+      .categories()
+      .subscribe((categories) => (this.categories = categories));
+  }
 
   public get isMobile(): boolean {
     return matchMedia('only screen and (max-width: 768px)').matches;

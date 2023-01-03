@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import Category from '@/models/Category';
 
 @Component({
@@ -7,6 +7,8 @@ import Category from '@/models/Category';
   styleUrls: ['./sidebar.component.scss'],
 })
 export class SidebarComponent implements OnInit {
+  @Input() public categories!: readonly Category[];
+
   constructor() {}
 
   ngOnInit(): void {}
@@ -15,9 +17,4 @@ export class SidebarComponent implements OnInit {
   public log(message = 'Hello, World!') {
     console.log(message);
   }
-  public categories = [
-    new Category('フロントエンド', 'front', '#FFE664'),
-    new Category('バックエンド', 'front', '#C0EEEE'),
-    new Category('インフラ', 'front', '#9DE8C4'),
-  ];
 }

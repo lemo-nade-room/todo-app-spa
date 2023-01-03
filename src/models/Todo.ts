@@ -1,5 +1,6 @@
 export default class Todo {
   public constructor(
+    public readonly id: number,
     public readonly title: string,
     public readonly dateString: string,
     public readonly text: string
