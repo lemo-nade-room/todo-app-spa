@@ -3,9 +3,9 @@ import { Observable, of } from 'rxjs';
 import Category from '@/models/Category';
 
 const CATEGORIES: readonly Category[] = [
-  new Category(1, 'フロントエンド', 'front', '#FFE664'),
-  new Category(2, 'バックエンド', 'front', '#C0EEEE'),
-  new Category(3, 'インフラ', 'front', '#9DE8C4'),
+  new Category(1, 'フロントエンド', 'front', 1),
+  new Category(2, 'バックエンド', 'front', 2),
+  new Category(3, 'インフラ', 'front', 3),
 ];
 
 @Injectable({
@@ -24,7 +24,7 @@ export class CategoryService {
     color: number
   ): Observable<void> => {
     const id = this.maxId() + 1;
-    this.value.push(new Category(id, name, slug, 'black'));
+    this.value.push(new Category(id, name, slug, color));
     return of(undefined);
   };
 

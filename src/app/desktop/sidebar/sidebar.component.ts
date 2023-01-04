@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import Category from '@/models/Category';
+import { CategoryService } from '@/app/category.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,15 +8,33 @@ import Category from '@/models/Category';
   styleUrls: ['./sidebar.component.scss'],
 })
 export class SidebarComponent implements OnInit {
-  @Input() public categories!: readonly Category[];
+  constructor(private categoryService: CategoryService) {}
 
-  constructor() {}
+  ngOnInit(): void {
+    this.load();
+  }
 
-  ngOnInit(): void {}
+  private load(): void {
+    this.categoryService
+      .categories()
+      .subscribe((categories) => (this.categories = categories));
+  }
+
+  public onCreate(): void {
+    this.categoryService
+      .append(this.folder, this.slug, this.color)
+      .subscribe(() => {
+        this.load();
+        this.open = false;
+      });
+  }
+
+  public categories: readonly Category[] = [];
 
   public isEdit = false;
+
   public open = false;
-  public log(message = 'Hello, World!') {
-    console.log(message);
-  }
+  public folder = '';
+  public slug = '';
+  public color = 1;
 }

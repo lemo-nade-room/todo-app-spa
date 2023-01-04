@@ -8,7 +8,7 @@ import Category from '@/models/Category';
   styleUrls: ['./mobile-todo-view.component.scss'],
 })
 export class MobileTodoViewComponent implements OnInit {
-  @Input() public category: Category = new Category(1, '', '', 'white');
+  @Input() public category: Category = new Category(1, '', '', 1);
   @Input() public states: readonly TodoState[] = [];
 
   constructor() {}

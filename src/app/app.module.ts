@@ -26,6 +26,7 @@ import { ViewTodoViewComponent } from './view/view-todo-view/view-todo-view.comp
 import { BaseDialogComponent } from './common/dialog/base-dialog/base-dialog.component';
 import { CreateCategoryDialogComponent } from './common/dialog/category/create-category-dialog/create-category-dialog.component';
 import { StaticAccentButtonComponent } from './common/button/static-accent-button/static-accent-button.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -60,6 +61,7 @@ import { StaticAccentButtonComponent } from './common/button/static-accent-butto
       { path: '', component: ViewHomeComponent },
       { path: 'todo', component: ViewTodoViewComponent },
     ]),
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

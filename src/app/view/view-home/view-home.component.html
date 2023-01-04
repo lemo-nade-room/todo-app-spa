@@ -1,8 +1,8 @@
 <div class="home">
   <div *ngIf="isMobile; else elseContent">
-    <app-mobile-home [categories]="categories"></app-mobile-home>
+    <app-mobile-home></app-mobile-home>
   </div>
   <ng-template #elseContent>
-    <app-desktop-home [categories]="categories"></app-desktop-home>
+    <app-desktop-home></app-desktop-home>
   </ng-template>
 </div>

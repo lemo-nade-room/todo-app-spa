@@ -16,7 +16,7 @@ export class ViewTodoViewComponent implements OnInit {
   ) {}
 
   public states: readonly TodoState[] = [];
-  public category: Category = new Category(1, '', '', 'white');
+  public category: Category = new Category(1, '', '', 1);
 
   public categories: readonly Category[] = [];
 

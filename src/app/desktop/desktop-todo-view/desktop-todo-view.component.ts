@@ -10,7 +10,6 @@ import Category from '@/models/Category';
 export class DesktopTodoViewComponent implements OnInit {
   @Input() public category!: Category;
   @Input() public states!: readonly TodoState[];
-  @Input() public categories!: readonly Category[];
 
   constructor() {}
 

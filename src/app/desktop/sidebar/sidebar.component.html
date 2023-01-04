@@ -8,5 +8,11 @@
     (create)="open = true"
     class="category"
   ></app-category>
-  <app-create-category-dialog [open]="true"></app-create-category-dialog>
+  <app-create-category-dialog
+    [(open)]="open"
+    [(folder)]="folder"
+    [(slug)]="slug"
+    [(color)]="color"
+    (create)="onCreate()"
+  ></app-create-category-dialog>
 </div>

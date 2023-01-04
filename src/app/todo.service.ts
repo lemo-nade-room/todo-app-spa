@@ -55,7 +55,7 @@ const TODOS: readonly TodoState[] = [
   ]),
 ];
 
-const CATEGORY = new Category(1, 'フロントエンド', 'front', '#FFE664');
+const CATEGORY = new Category(1, 'フロントエンド', 'front', 1);
 
 @Injectable({
   providedIn: 'root',
