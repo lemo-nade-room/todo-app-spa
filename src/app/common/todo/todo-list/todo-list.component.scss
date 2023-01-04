@@ -1,0 +1,77 @@
+@import "../../../../assets/style/variables";
+
+.todo-list {
+  width: 312px;
+
+  background: $contentBaseColor;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+
+  & > .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    position: relative;
+
+    $itemHeight: 60px;
+    padding: 10px 0;
+
+    width: 254px;
+    height: $itemHeight;
+
+    & > .title {
+      width: 100%;
+
+      height: calc($itemHeight / 2);
+      left: 497px;
+      top: 180px;
+
+      font-family: $fontFamily;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: calc($itemHeight / 2);
+
+      color: $normalSentenceColor;
+    }
+
+    & > .h-stack {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: calc($itemHeight / 2);
+      font-family: $fontFamily;
+
+      color: $graySentenceColor;
+      width: 100%;
+      height: calc($itemHeight / 2);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      width: 284px;
+      height: 1px;
+      background-color: $lineColor;
+
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+
+    &:last-of-type {
+      &:after {
+        display: none;
+      }
+    }
+  }
+}

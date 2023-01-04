@@ -1,0 +1,8 @@
+<ul class="categories-list">
+  <li class="item" *ngFor="let category of categories">
+   <span class="icon-container">
+      <app-category-color-icon class="icon" [color]="category.colorCode" [length]="24"></app-category-color-icon>
+    </span>
+    <span class="name">{{ category.name }}</span>
+  </li>
+</ul>

@@ -1,0 +1,17 @@
+.todo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 312px;
+  height: 34px;
+
+  & > .left {
+
+    display: flex;
+
+    & > .icon {
+      margin-right: 12px;
+    }
+  }
+}

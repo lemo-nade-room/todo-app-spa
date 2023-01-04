@@ -1,0 +1,17 @@
+<div class="home">
+  <app-category
+    [categories]="categories"
+    titleColor="black"
+    buttonsColor="#BFA445"
+    backgroundColor="#F9F9F9"
+    [(isEdit)]="isEdit"
+    (create)="open = true"
+  ></app-category>
+  <app-create-category-dialog
+    [(open)]="open"
+    [(color)]="color"
+    [(folder)]="folder"
+    [(slug)]="slug"
+    (create)="onCreate()"
+  ></app-create-category-dialog>
+</div>

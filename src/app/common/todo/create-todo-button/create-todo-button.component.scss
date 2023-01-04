@@ -1,0 +1,42 @@
+@import "../../../../assets/style/variables";
+
+.create-todo-button {
+  $radius: 24px;
+  width: $radius;
+  height: $radius;
+
+  background-color: transparent;
+
+  border: 1px solid $accessoryColor;
+  border-radius: 50%;
+
+  position: relative;
+
+  &:before {
+    content: '';
+    width: 18px;
+    height: 1px;
+
+    background-color: $accessoryColor;
+    border-radius: 1px;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:after {
+    content: '';
+    width: 1px;
+    height: 18px;
+
+    background-color: $accessoryColor;
+    border-radius: 1px;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

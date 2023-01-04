@@ -1,0 +1,39 @@
+<app-base-dialog [open]="open" (openChange)="openChange.emit($event)">
+  <div class="create-category-dialog">
+    <div class="header">
+      <app-static-accent-button (click)="close()">キャンセル</app-static-accent-button>
+      <app-static-accent-button (click)="create.emit()">追加</app-static-accent-button>
+    </div>
+
+    <div class="form">
+      <span class="color-slug-container">
+        <span class="color">
+          <app-category-color-icon [color]="colorCode" [length]="24"></app-category-color-icon>
+          <select class="selection" [value]="color" #colorElement (change)="emitColor(colorElement.value)" >
+            <option value="1">きいろ</option>
+            <option value="2">あお</option>
+            <option value="3">みどり</option>
+          </select>
+        </span>
+        <input
+          class="slug"
+          type="text"
+          placeholder="Slug"
+          #slugElement
+          [value]="slug"
+          (keyup)="slugChange.emit(slugElement.value)"
+        >
+      </span>
+
+      <input
+        class="folder"
+        type="text"
+        placeholder="フォルダ名"
+        #folderElement
+        [value]="folder"
+        (keyup)="folderChange.emit(folderElement.value)"
+      >
+    </div>
+
+  </div>
+</app-base-dialog>

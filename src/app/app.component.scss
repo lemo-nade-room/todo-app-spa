@@ -1,0 +1,8 @@
+@import "src/assets/style/variables";
+
+.app {
+  display: block;
+  background-color: $backgroundColor;
+  width: 100vw;
+  height: 100vh;
+}

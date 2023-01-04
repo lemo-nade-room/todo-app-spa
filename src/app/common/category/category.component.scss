@@ -1,0 +1,24 @@
+.category {
+  width: 312px;
+
+  & > .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 34px;
+    width: 100%;
+
+    & > .buttons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      height: 100%;
+      width: 68px;
+    }
+  }
+
+  & > .list {
+    margin-top: 12px;
+  }
+}

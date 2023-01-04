@@ -1,0 +1,14 @@
+@import "../../../../assets/style/variables";
+.state-title {
+  height: 34px;
+
+  font-family: $fontFamily;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 34px;
+
+  margin: 0;
+
+  color: $normalSentenceColor;
+}

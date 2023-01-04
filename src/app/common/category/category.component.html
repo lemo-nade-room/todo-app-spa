@@ -1,0 +1,26 @@
+<div class="category">
+
+  <div class="header">
+
+    <app-categories-list-title [color]="titleColor"></app-categories-list-title>
+
+    <span class="buttons">
+
+      <app-create-category-button
+        [color]="buttonsColor"
+        [backgroundColor]="backgroundColor"
+        (click)="create.emit()"
+      ></app-create-category-button>
+
+      <app-edit-button
+        [color]="buttonsColor"
+        (valueChange)="isEditChange.emit($event)"
+        [value]="isEdit"
+      ></app-edit-button>
+
+    </span>
+
+  </div>
+
+  <app-categories-list class="list" [categories]="categories"></app-categories-list>
+</div>
