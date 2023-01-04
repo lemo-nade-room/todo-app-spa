@@ -1,0 +1,14 @@
+@import "src/assets/style/variables";
+
+.static-accent-button {
+  display: block;
+
+  border: none;
+  background-color: transparent;
+  color: $accessoryColor;
+  font-family: $fontFamily;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 0;
+}

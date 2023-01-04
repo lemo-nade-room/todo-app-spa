@@ -23,6 +23,9 @@ import { DesktopHomeComponent as DesktopHomeComponent } from '@/app/desktop/home
 import { DesktopTodoViewComponent as DesktopTodoViewComponent } from './desktop/desktop-todo-view/desktop-todo-view.component';
 import { ViewHomeComponent } from './view/view-home/view-home.component';
 import { ViewTodoViewComponent } from './view/view-todo-view/view-todo-view.component';
+import { BaseDialogComponent } from './common/dialog/base-dialog/base-dialog.component';
+import { CreateCategoryDialogComponent } from './common/dialog/category/create-category-dialog/create-category-dialog.component';
+import { StaticAccentButtonComponent } from './common/button/static-accent-button/static-accent-button.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +49,9 @@ import { ViewTodoViewComponent } from './view/view-todo-view/view-todo-view.comp
     DesktopTodoViewComponent,
     ViewHomeComponent,
     ViewTodoViewComponent,
+    BaseDialogComponent,
+    CreateCategoryDialogComponent,
+    StaticAccentButtonComponent,
   ],
   imports: [
     BrowserModule,

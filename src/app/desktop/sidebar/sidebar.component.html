@@ -5,7 +5,8 @@
     buttonsColor="white"
     backgroundColor="#77A88D"
     [(isEdit)]="isEdit"
-    (create)="log('create')"
+    (create)="open = true"
     class="category"
   ></app-category>
+  <app-create-category-dialog [open]="true"></app-create-category-dialog>
 </div>

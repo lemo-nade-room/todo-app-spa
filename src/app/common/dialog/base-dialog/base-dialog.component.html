@@ -1,0 +1,4 @@
+<div class="overlay" (click)="close()" *ngIf="open"></div>
+<dialog class="base-dialog" [style]="dialogStyle" *ngIf="open">
+  <ng-content></ng-content>
+</dialog>

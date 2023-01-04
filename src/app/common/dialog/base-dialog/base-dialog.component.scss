@@ -1,0 +1,15 @@
+.overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.2);
+  left: 0;
+  top: 0;
+}
+.base-dialog {
+  position: fixed;
+  display: block;
+  background: #F9F9F9;
+  border: 1px solid #828282;
+  border-radius: 10px;
+}

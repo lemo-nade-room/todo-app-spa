@@ -14,6 +14,7 @@ export class SidebarComponent implements OnInit {
   ngOnInit(): void {}
 
   public isEdit = false;
+  public open = false;
   public log(message = 'Hello, World!') {
     console.log(message);
   }
